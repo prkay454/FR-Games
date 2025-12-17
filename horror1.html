@@ -1,1 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Don't Look Away</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<h1>Don't Look Away</h1>
 
+<iframe src="https://tommchenry.itch.io/dont-look-away" width="100%" height="600" frameborder="0" allowfullscreen></iframe>
+
+<script>
+let recent = JSON.parse(localStorage.getItem("recentGames")) || [];
+recent = recent.filter(g => g !== "Don't Look Away");
+recent.unshift("Don't Look Away");
+recent = recent.slice(0,5);
+localStorage.setItem("recentGames", JSON.stringify(recent));
+</script>
+</body>
+</html>
